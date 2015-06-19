@@ -9,7 +9,7 @@
 /**
  * Livereload and connect variables
  */
-var LIVERELOAD_PORT = 35729;
+var LIVERELOAD_PORT = 3030;
 var lrSnippet = require('connect-livereload')({
   port: LIVERELOAD_PORT
 });
