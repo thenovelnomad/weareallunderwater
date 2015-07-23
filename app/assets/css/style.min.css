@@ -38,7 +38,11 @@ body {
   color: #444;
 }
 
-.main::before {
+.hidden {
+  display: none;
+}
+
+.background-image::before {
   content: "";
   position: fixed;
   left: 0;
@@ -47,14 +51,18 @@ body {
   top: 0;
   z-index: -1;
   display: block;
-  background-image: url("../img/cover-notext.jpg");
+  /*background-image: url("../img/cover-notext.jpg");*/
   background-size: cover;
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
-  -ms-filter: blur(20px);
 }
 
-.main img {
+.background-image.animated {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: filter-animation 6s infinite;
+}
+
+.main x-gif {
   display: block;
   width: 500px;
   max-width: 100%;
@@ -71,6 +79,23 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+.main .player {
+  text-align: center;
+}
+
+.main .player button {
+  border: none;
+  background-color: transparent;
+}
+
+.main .player button:focus {
+  outline: none;
+}
+
+.main .player button img {
+  height: 4em;
 }
 
 .main .social-media {
