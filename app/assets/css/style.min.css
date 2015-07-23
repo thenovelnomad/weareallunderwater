@@ -38,6 +38,10 @@ body {
   color: #444;
 }
 
+.hidden {
+  display: none;
+}
+
 .background-image::before {
   content: "";
   position: fixed;
@@ -47,7 +51,7 @@ body {
   top: 0;
   z-index: -1;
   display: block;
-  background-image: url("../img/cover-notext.jpg");
+  /*background-image: url("../img/cover-notext.jpg");*/
   background-size: cover;
 }
 
@@ -58,7 +62,7 @@ body {
   -webkit-animation: filter-animation 6s infinite;
 }
 
-.main img {
+.main x-gif {
   display: block;
   width: 500px;
   max-width: 100%;
@@ -75,6 +79,23 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+.main .player {
+  text-align: center;
+}
+
+.main .player button {
+  border: none;
+  background-color: transparent;
+}
+
+.main .player button:focus {
+  outline: none;
+}
+
+.main .player button img {
+  height: 4em;
 }
 
 .main .social-media {
@@ -104,34 +125,6 @@ body {
 
 .main .social-media i:hover {
   color: white;
-}
-
-@-webkit-keyframes filter-animation {
-  0% {
-    -webkit-filter: blur(5px) saturate(50%);
-  }
-
-  50% {
-    -webkit-filter: blur(30px) saturate(120%);
-  }
-
-  100% {
-    -webkit-filter: blur(5px) saturate(50%);
-  }
-}
-
-@-webkit-keyframes filter-animation-in {
-  0% {
-    -webkit-filter: blur(5px);
-  }
-
-  50% {
-    -webkit-filter: blur(30px);
-  }
-
-  100% {
-    -webkit-filter: blur(5px);
-  }
 }
 
 @font-face {

@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <script src="assets/components/modernizr.js"></script>
+    <script>
+      if ('registerElement' in document
+        && 'createShadowRoot' in HTMLElement.prototype
+        && 'import' in document.createElement('link')
+        && 'content' in document.createElement('template')) {
+        // We're using a browser with native WC support!
+      } else {
+        document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>')
+      }
+    </script>
+    <link rel="import" href="x-gif.html">
 
   </head>
   <body>
@@ -21,12 +32,18 @@
 
     <main class="main" role="main">
       <section class="album-cover">
-        <img src="assets/img/cover.png" />
+        <!-- <img src="assets/img/cover.png" /> -->
+        <x-gif src="http://i.imgur.com/ZmKncUv.gif" bpm="130" snap stopped></x-gif>
       </section>
-      
+
       <!--<section class="soundcloud">
         <iframe width="500px" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/11401891&amp;color=6b8ba3&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
       </section> -->
+
+      <section class="player">
+        <button class="play"><img src='assets/img/chants-play.png'/></button>
+        <button class="pause hidden"><img src='assets/img/chants-pause.png'/></button>
+      </section>
 
       <section class="social-media">
         <i class="fa fa-soundcloud"></i>
