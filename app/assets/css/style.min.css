@@ -111,14 +111,14 @@ body {
 }
 
 ::-moz-selection {
-  background: #333;
-  color: #fff;
+  background: #333333;
+  color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: #333;
-  color: #fff;
+  background: #333333;
+  color: white;
   text-shadow: none;
 }
 
@@ -184,5 +184,3 @@ body {
     page-break-after: avoid;
   }
 }
-
-/*# sourceMappingURL=style.unprefixed.css.map */
