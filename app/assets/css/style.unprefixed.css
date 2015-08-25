@@ -39,29 +39,16 @@ body {
   display: none;
 }
 
-.background-image::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  display: block;
-  /*background-image: url("../img/cover-notext.jpg");*/
-  background-size: cover;
-}
-.background-image.animated {
-  backface-visibility: hidden;
-  -webkit-animation: filter-animation 6s infinite;
-}
-
-.main x-gif {
+.main .album-cover {
   display: block;
   width: 500px;
   max-width: 100%;
   height: auto;
   margin: 40px auto;
+  text-align: center;
+}
+.main .album-cover img {
+  width: 80%;
 }
 .main .soundcloud {
   height: 166px;
@@ -74,16 +61,24 @@ body {
 }
 .main .player {
   text-align: center;
+  color: #6b8ba3;
 }
 .main .player button {
   border: none;
   background-color: transparent;
+  cursor: auto;
 }
 .main .player button:focus {
   outline: none;
 }
 .main .player button img {
   height: 4em;
+}
+.main .player .play-pause {
+  display: inline-block;
+  width: 60px;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 .main .social-media {
   display: flex;
@@ -102,6 +97,21 @@ body {
 }
 .main .social-media i:hover {
   color: white;
+}
+.main .social-media img.bandcamp {
+  vertical-align: super;
+  margin-top: 4px;
+}
+
+.attribution {
+  text-align: center;
+  color: #6b8ba3;
+}
+.attribution h6 {
+  margin: 1em 0;
+}
+.attribution a {
+  color: #fff;
 }
 
 /*@-webkit-keyframes filter-animation {

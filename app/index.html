@@ -32,8 +32,12 @@
 
     <main class="main" role="main">
       <section class="album-cover">
-        <!-- <img src="assets/img/cover.png" /> -->
-        <x-gif src="http://i.imgur.com/ZmKncUv.gif" bpm="" snap stopped></x-gif>
+        <div>
+          <x-gif src="assets/img/gifs/500x500-NoText-Lossy.gif" bpm="" snap stopped>
+            <img src="assets/img/chants-copy.png">
+          </x-gif>
+          <img src="assets/img/chants-copy.png">
+        </div>
       </section>
 
       <!--<section class="soundcloud">
@@ -41,21 +45,27 @@
       </section> -->
 
       <section class="player">
-        <h3 class='track-name'></h3>
         <button class="back"><img src='assets/img/chants-back.png'/></button>
-        <button class="play"><img src='assets/img/chants-play.png'/></button>
-        <button class="pause hidden"><img src='assets/img/chants-pause.png'/></button>
+        <span class="play-pause">
+          <button class="play"><img src='assets/img/chants-play.png'/></button>
+          <button class="pause hidden"><img src='assets/img/chants-pause.png'/></button>
+        </span>
         <button class="skip"><img src='assets/img/chants-skip.png'/></button>
+        <h2 class='track-name'></h2>
       </section>
 
       <section class="social-media">
         <i class="fa fa-soundcloud"></i>
-        <a href="http://bandcamp.com"><img src="https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png"></a>
+        <a href="http://bandcamp.com"><img class="bandcamp" src="https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png"></a>
         <i class="fa fa-facebook-official"></i>
         <i class="fa fa-twitter-square"></i>
       </section>
-
     </main>
+    <footer class="attribution">
+      <h6>Cover Design by <a href="http://www.mikewilliamsdesign.com/" target="_blank">Mike Williams</a></h6>
+      <h6>Animation by <a href="http://weinventyou.net/" target="_blank">Zach Scott</a></h6>
+      <h6>Website by <a href="https://github.com/thenovelnomad" target="_blank">the novel nomad</a> and <a href="" target="_blank">Endre Cseley</a></h6>
+    </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
@@ -63,12 +73,12 @@
     <script src="assets/js/scripts.min.js"></script>
 
     <script>
-    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-XXXXXXXX-XX');
-    ga('send', 'pageview');
+      (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+      (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+      l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXXXXX-XX');
+      ga('send', 'pageview');
     </script>
 
   </body>
