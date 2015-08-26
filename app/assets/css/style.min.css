@@ -132,8 +132,7 @@ body {
 }
 
 .main .social-media img.bandcamp {
-  vertical-align: super;
-  margin-top: 4px;
+  padding-top: 24px;
 }
 
 .attribution {
