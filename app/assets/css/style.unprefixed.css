@@ -47,8 +47,15 @@ body {
   margin: 40px auto;
   text-align: center;
 }
-.main .album-cover img {
+.main .album-cover .album-combo {
+  position: relative;
+}
+.main .album-cover .album-combo img {
   width: 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main .soundcloud {
   height: 166px;
