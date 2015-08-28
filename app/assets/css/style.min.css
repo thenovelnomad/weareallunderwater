@@ -79,6 +79,7 @@ body {
 .main .player {
   text-align: center;
   color: #6b8ba3;
+  font-size: 1em;
 }
 
 .main .player button {
@@ -92,14 +93,15 @@ body {
 }
 
 .main .player button img {
-  height: 4em;
+  width: 100%;
+  height: 100%;
 }
 
-.main .player .play-pause {
+.main .player .control-wrapper {
   display: inline-block;
-  width: 60px;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  width: 4em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .main .social-media {
