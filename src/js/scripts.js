@@ -4,6 +4,7 @@
 	const CLIENT_ID = 'c65d774dc008030d7baf91fa4030b1f6';
   const PLAYLIST = '94097386';
   const SECRET_TOKEN = 's-Mq3BZ';
+  const SINGLE_ONLY = true;
   var BPMS = [
     60,
     120,
@@ -21,7 +22,7 @@
     function Player(tracks) {
       var self = this;
       var notFirstPlay = false;
-      var currTrackId = 0;
+      var currTrackId = SINGLE_ONLY ? 1 : 0;
       var currTrack;
       var currTrackDuration = 0;
       var totalTracks = tracks.length;
@@ -52,7 +53,9 @@
               gif.removeAttr('stopped');
             });
 
-            $(sound._player._html5Audio).on('ended', next);
+            if (!SINGLE_ONLY) {
+              $(sound._player._html5Audio).on('ended', next);
+            }
 
             if (notFirstPlay) {
               togglePlay();
@@ -141,12 +144,19 @@
       player.pause();
     });
 
-    previous.on('click', function() {
-      player.previous();
-    });
+    if (!SINGLE_ONLY) {
+      previous.removeClass('hidden');
+      next.removeClass('hidden');
 
-    next.on('click', function() {
-      player.next();
-    });
+      previous.on('click', function() {
+        player.previous();
+      });
+
+      next.on('click', function() {
+        player.next();
+      });
+    } else {
+      $('.single-only').removeClass('hidden');
+    }
 	});
 })(jQuery, window, document);

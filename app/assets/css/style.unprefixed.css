@@ -39,6 +39,15 @@ body {
   display: none;
 }
 
+body {
+  font-size: 12px;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 8px;
+  }
+}
+
 .main .album-cover {
   display: block;
   width: 500px;
@@ -51,29 +60,28 @@ body {
   position: relative;
 }
 .main .album-cover .album-combo img {
-  width: 80%;
+  width: 75%;
   position: absolute;
-  top: 0;
+  top: 3%;
   left: 50%;
   transform: translateX(-50%);
 }
-.main .soundcloud {
-  height: 166px;
-  overflow: hidden;
-}
-.main .soundcloud iframe {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+.main .order, .main .order a {
+  text-align: center;
+  color: #6b8ba3;
 }
 .main .player {
   text-align: center;
   color: #6b8ba3;
 }
+.main .player .single-only {
+  padding-bottom: 10px;
+}
 .main .player button {
   border: none;
   background-color: transparent;
   cursor: auto;
+  padding: 0 15px;
 }
 .main .player button:focus {
   outline: none;
@@ -81,19 +89,21 @@ body {
 .main .player button img {
   height: 4em;
 }
-.main .player .play-pause {
-  display: inline-block;
-  width: 60px;
-  margin-left: 3rem;
-  margin-right: 3rem;
+@media only screen and (max-width: 480px) {
+  .main .player button img {
+    height: 3em;
+  }
+}
+.main .player .track-name {
+  color: #ddd;
 }
 .main .social-media {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  max-width: 500px;
   font-size: 5em;
   color: #fff;
-  width: 500px;
   margin: 20px auto;
   padding-top: 20px;
   border-top: 1px solid #666;
@@ -106,7 +116,8 @@ body {
   color: white;
 }
 .main .social-media img.bandcamp {
-  padding-top: 24px;
+  margin-top: 0.35em;
+  height: 1em;
 }
 
 .attribution {
@@ -115,38 +126,12 @@ body {
 }
 .attribution h6 {
   margin: 1em 0;
+  font-size: 8px;
 }
 .attribution a {
   color: #fff;
 }
 
-/*@-webkit-keyframes filter-animation {
-  0% {
-    -webkit-filter: blur(5px) saturate(50%);
-  }
-
-  50% {
-    -webkit-filter: blur(30px) saturate(120%);
-  }
-
-  100% {
-    -webkit-filter: blur(5px) saturate(50%);
-  }
-}
-
-@-webkit-keyframes filter-animation-in {
-  0% {
-    -webkit-filter: blur(5px);
-  }
-
-  50% {
-    -webkit-filter: blur(30px);
-  }
-
-  100% {
-    -webkit-filter: blur(5px);
-  }
-}*/
 @font-face {
   font-family: 'Font-Name';
   src: url("../fonts/font-name.eot");
