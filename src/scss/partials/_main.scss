@@ -14,12 +14,25 @@ body {
     display: block;
     width: 500px;
     max-width: 100%;
-    height: auto;
+    height: 500px;
+    @media only screen and (max-width: 499px) {
+      height: 100vw;
+    }
     margin: 40px auto;
     text-align: center;
 
     .album-combo {
       position: relative;
+      width: 500px;
+      max-width: 100%;
+      min-height: 100%;
+
+      div#frames {
+        height: 500px;
+        @media only screen and (max-width: 499px) {
+          height: 100vw;
+        }
+      }
 
       img {
         width: 75%;

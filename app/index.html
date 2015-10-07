@@ -13,7 +13,6 @@
     <link href="assets/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <script src="assets/components/modernizr.js"></script>
     <script>
       if ('registerElement' in document
         && 'createShadowRoot' in HTMLElement.prototype
@@ -21,9 +20,10 @@
         && 'content' in document.createElement('template')) {
         // We're using a browser with native WC support!
       } else {
-        document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>')
+        document.write('<script src="assets\/components\/webcomponentsjs.js"><\/script>')
       }
     </script>
+    <script src="assets/components/modernizr.js"></script>
     <link rel="import" href="x-gif.html">
 
   </head>
@@ -33,7 +33,7 @@
     <main class="main" role="main">
       <section class="album-cover">
         <div class="album-combo">
-          <x-gif src="assets/img/gifs/500x500-NoText-Lossy.gif" bpm="" snap stopped>
+          <x-gif src="assets/img/gifs/500x500-NoText-lossy.gif" bpm="" snap stopped fill>
             <img src="assets/img/chants-copy.png">
           </x-gif>
           <img src="assets/img/chants-copy.png">
@@ -56,12 +56,12 @@
       </section>
 
       <section class="order">
-        <h2><a href="http://hushhushrecords.bandcamp.com/" target="_blank">Pre-order Limited Edition Cassette / Digital Download</a></h2>
+        <h2><a href="https://hushhushrecords.bandcamp.com/album/we-are-all-underwater" target="_blank">Pre-order Limited Edition Cassette / Digital Download</a></h2>
       </section>
 
       <section class="social-media">
         <a href="https://soundcloud.com/chantssound" title="CHANTS on soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
-        <a href="http://hushhushrecords.bandcamp.com/" title="We Are All Underwater on bandcamp" target="_blank"><img class="bandcamp" src="https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png"></a>
+        <a href="https://hushhushrecords.bandcamp.com/album/we-are-all-underwater" title="We Are All Underwater on bandcamp" target="_blank"><img class="bandcamp" src="https://s1.bcbits.com/img/buttons/bandcamp_60x60_black.png"></a>
         <a href="https://www.facebook.com/chantssound" title="CHANTS on facebook" target="_blank"><i class="fa fa-facebook-official"></i></a>
         <a href="https://twitter.com/chantswi" title="CHANTS on twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
       </section>

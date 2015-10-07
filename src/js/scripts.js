@@ -1,13 +1,13 @@
 (function ($, window, document, undefined) {
 
 	'use strict';
-	const CLIENT_ID = 'c65d774dc008030d7baf91fa4030b1f6';
-  const PLAYLIST = '94097386';
-  const SECRET_TOKEN = 's-Mq3BZ';
-  const SINGLE_ONLY = true;
+	var CLIENT_ID = 'c65d774dc008030d7baf91fa4030b1f6';
+  var PLAYLIST = '94097386';
+  var SECRET_TOKEN = 's-Mq3BZ';
+  var SINGLE_ONLY = true;
   var BPMS = [
     60,
-    120,
+    60,
     116,
     130,
     140,
@@ -47,7 +47,7 @@
             }
           }, function(sound){
             // console.log(sound);
-            window.track = currTrack = sound;
+            currTrack = sound;
 
             $(sound._player._html5Audio).on('play', function() {
               gif.removeAttr('stopped');
@@ -55,6 +55,8 @@
 
             if (!SINGLE_ONLY) {
               $(sound._player._html5Audio).on('ended', next);
+            } else {
+              $(sound._player._html5Audio).on('ended', togglePause);
             }
 
             if (notFirstPlay) {
@@ -126,8 +128,6 @@
 
 		// tracks/120895837
 		SC.get('/playlists/' + PLAYLIST + '?secret_token=' + SECRET_TOKEN, function(set) {
-
-			window.jcl = set;
 
       for (var i in set.tracks) {
         set.tracks[i].bpm = BPMS[i];
